@@ -64,22 +64,22 @@ export default function ContactSection() {
     {
       icon: MapPin,
       title: "Ubicación Principal",
-      description: "Hospital ABC Santa Fe, Consultorio 524",
+      description: "Hospital Puebla. Priv. de las Ramblas 4",
     },
     {
       icon: Clock,
       title: "Horario de Atención",
-      description: "Lunes a Viernes: 9:00 AM - 6:00 PM",
+      description: "Martes a Jueves: 10:00 AM - 2:00 PM",
     },
     {
       icon: Phone,
       title: "Teléfono",
-      description: "55 1555 0994",
+      description: "222 184 3622",
     },
     {
       icon: Mail,
       title: "Email",
-      description: "info@obesidadmx.com",
+      description: "drespinosa.cirugia@gmail.com",
     },
   ]
 
@@ -89,8 +89,8 @@ export default function ContactSection() {
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-light text-gray-900 mb-4">Contacto</h2>
           <p className="text-lg text-gray-600">
-            El Dr. Carlos Zerrweck actualmente atiende en el Hospital ABC Santa Fe en la Ciudad de México, si usted está
-            en busca de tratamiento para la obesidad o quiere explorar sus opciones agende una cita aquí para recibir un
+            El Dr. Omar Espinosa actualmente atiende en el Hospital Puebla en la Ciudad de Puebla, si usted está
+            en busca de tratamiento o quiere explorar sus opciones agende una cita aquí para recibir un
             tratamiento adecuado por parte de un profesional.
           </p>
         </div>

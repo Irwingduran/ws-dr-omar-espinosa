@@ -12,7 +12,7 @@ export default function ServicesSection() {
         "Es importante que el paciente reciba y siga al pie de la letra un plan alimenticio indicado por un nutriólogo ya que la dieta es un factor que influye directamente en el resultado del procedimiento para que sea exitoso.",
       ],
       imageSrc:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-21%20at%204.50.18%E2%80%AFa.m.-QifioZ8s48vnLL9G9Ef2fcsG8qBZdk.png",
+        "",
       imageAlt: "Ilustración de bypass gástrico",
     },
     {
@@ -25,7 +25,7 @@ export default function ServicesSection() {
         "Es un procedimiento mínimamente invasivo que se realiza por laparoscopía, lo que permite una recuperación más rápida.",
       ],
       imageSrc:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-21%20at%204.50.06%E2%80%AFa.m.-dUGCAuhZaPck118vzClaZikCfLOl0f.png",
+        "",
       imageAlt: "Ilustración de manga gástrica",
     },
     {
@@ -37,7 +37,7 @@ export default function ServicesSection() {
         "La cirugía es segura y efectiva, permitiendo que el paciente continúe su vida normal sin la vesícula biliar.",
         "Después de la cirugía, la mayoría de las personas pueden regresar a sus actividades normales en aproximadamente una semana.",
       ],
-      imageSrc: "/placeholder.svg?height=400&width=500",
+      imageSrc: "",
       imageAlt: "Ilustración de colecistectomía",
     },
     {
@@ -49,7 +49,7 @@ export default function ServicesSection() {
         "Se utiliza una malla especial para reforzar la pared abdominal y prevenir futuras hernias.",
         "La mayoría de los pacientes pueden regresar a sus actividades normales en poco tiempo, con excelentes resultados a largo plazo.",
       ],
-      imageSrc: "/placeholder.svg?height=400&width=500",
+      imageSrc: "",
       imageAlt: "Ilustración de hernia inguinal laparoscópica",
     },
   ]

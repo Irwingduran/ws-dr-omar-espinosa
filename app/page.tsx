@@ -11,7 +11,7 @@ import FAQSection from "../components/faq"
 import LocationsSection from "../components/locations"
 import ContactSection from "../components/contact"
 import EnhancedFooter from "../components/enhanced"
-import WhatsAppButton from "../components/whatsapp-button"
+import WhatsAppButton from "../components/social-media-buttons"
 import CookieConsent from "../components/cookie"
 
 export default function Home() {
@@ -21,15 +21,21 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <div id="about">
         <AboutSection />
+        </div>
+        <div id="service">
         <ServicesBanner />
+        </div>
         <ServicesSection />
         <VideoSection />
         <GallerySection />
         <ReviewsSection />
         <FAQSection />
         <LocationsSection />
+        <div id="contact">
         <ContactSection />
+        </div>
       </main>
       <EnhancedFooter />
       <WhatsAppButton />

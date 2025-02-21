@@ -10,7 +10,7 @@ export default function VideoSection() {
             </p>
           </div>
 
-          <div className="relative rounded-xl overflow-hidden shadow-2xl bg-white">
+          <div className="relative rounded-xl overflow-hidden bg-white">
             {/* Video Wrapper with 16:9 aspect ratio */}
             <div className="relative pb-[56.25%] h-0">
               <iframe
