@@ -21,9 +21,7 @@ export default function About() {
                 pacientes, ofreciendo soluciones quirúrgicas avanzadas y seguras.
               </p>
             </div>
-            <Button className="bg-[#FFB800] text-white hover:bg-[#e5a600] text-lg px-8">
-              Contáctame
-            </Button>
+          
           </div>
 
           {/* Imagen (intercambiada a la izquierda en pantallas md y mayores) */}

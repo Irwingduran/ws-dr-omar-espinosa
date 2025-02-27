@@ -3,6 +3,7 @@ import ServiceCard from "./service-card";
 export default function ServicesSection() {
   const services = [
     {
+      id: "bypassg", // ID añadido
       title: "Bypass Gástrico",
       shortDescription:
         "El bypass gástrico, es un tipo de cirugía de pérdida de peso que implica crear un pequeño estómago y conectarlo directamente con el intestino delgado.",
@@ -15,6 +16,7 @@ export default function ServicesSection() {
       imageAlt: "Ilustración de bypass gástrico",
     },
     {
+      id: "mangag", // ID añadido
       title: "Manga Gástrica",
       shortDescription:
         "La manga gástrica es una operación que permite reducir drásticamente el tamaño del estómago mediante la extirpación de hasta el 80% de su volumen total.",
@@ -27,6 +29,7 @@ export default function ServicesSection() {
       imageAlt: "Ilustración de manga gástrica",
     },
     {
+      id: "colecistectomiaa", // ID añadido
       title: "Colecistectomia",
       shortDescription:
         "La colecistectomía es la cirugía para extraer la vesícula biliar, generalmente debido a cálculos biliares que causan dolor y otros síntomas.",
@@ -39,6 +42,7 @@ export default function ServicesSection() {
       imageAlt: "Ilustración de colecistectomía",
     },
     {
+      id: "HIL", // ID añadido
       title: "Hernia Inguinal Laparoscópica",
       shortDescription:
         "La hernia inguinal laparoscópica es una técnica mínimamente invasiva para reparar hernias en la región inguinal mediante pequeñas incisiones.",
@@ -57,7 +61,7 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="space-y-8">
           {services.map((service, index) => (
-            <div key={service.title}>
+            <div key={service.id} id={service.id}> {/* Usamos el ID aquí */}
               <ServiceCard {...service} />
               {index < services.length - 1 && <div className="border-t border-gray-200" />}
             </div>

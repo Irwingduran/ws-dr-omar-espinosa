@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "./ui/button"
 import { Card, CardContent } from "./ui/card"
-import { Badge } from "./ui/badge"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
 
@@ -17,7 +16,7 @@ const reviews = [
     location: "CDMX",
     comment:
       "Mi experiencia con el Dr. Espinosa fue extraordinaria. Los resultados han superado mis expectativas.",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "icon/cuenta.png",
     verified: true,
   },
   {
@@ -28,7 +27,7 @@ const reviews = [
     location: "Cancún",
     comment:
       "Después de investigar mucho, elegí al Dr. Espinosa para mi cirugía. Han pasado 6 meses y los resultados son increíbles.",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "icon/cuenta.png",
     verified: true,
   },
 ]
@@ -78,6 +77,19 @@ export default function ReviewsSection() {
           </Button>
           <Button variant="outline" onClick={() => emblaApi && emblaApi.scrollNext()}>
             <ChevronRight className="h-5 w-5" />
+          </Button>
+        </div>
+        {/* Sección para dejar un comentario */}
+        <div className="mt-8 text-center">
+          <p className="text-lg text-gray-800 mb-2">
+            ¿Has tenido una experiencia con el Dr. Espinosa? ¡Déjanos tu opinión en Google!
+          </p>
+          <Button
+            variant="default"
+            className="bg-yellow-500 text-white hover:bg-yellow-600 uppercase px-6 py-3 text-sm font-medium"
+            onClick={() => window.open("https://g.page/r/CODIGO_DE_GOOGLE_BUSINESS/review", "_blank")}
+          >
+            Dejar un comentario
           </Button>
         </div>
       </div>

@@ -7,25 +7,25 @@ const services = [
     id: "bypass",
     name: "Bypass Gástrico",
     icon: <FaHeart className="w-12 h-12 text-white" />,
-    href: "#bypassg",
+    href: "#bypassg", // Coincide con el ID en ServicesSection
   },
   {
     id: "manga",
     name: "Manga Gástrica",
     icon: <FaStethoscope className="w-12 h-12 text-white" />,
-    href: "#mangag",
+    href: "#mangag", // Coincide con el ID en ServicesSection
   },
   {
-    id: "banda",
-    name: "Banda Gástrica",
+    id: "colecistectomia",
+    name: "Colecistectomia",
     icon: <FaWeight className="w-12 h-12 text-white" />,
-    href: "#bandag",
+    href: "#colecistectomiaa", // Coincide con el ID en ServicesSection
   },
   {
-    id: "balon",
-    name: "Balón Gástrico",
+    id: "hil",
+    name: "Hernia Inguinal Laparoscópica",
     icon: <FaMedkit className="w-12 h-12 text-white" />,
-    href: "#balong",
+    href: "#HIL", // Coincide con el ID en ServicesSection
   },
 ];
 
