@@ -1,4 +1,4 @@
-import ServiceCard from "./service-card"
+import ServiceCard from "./service-card";
 
 export default function ServicesSection() {
   const services = [
@@ -11,8 +11,7 @@ export default function ServicesSection() {
         "El bypass gástrico ayuda a reducir el riesgo de tener problemas de salud relacionados con el peso que pueden poner en riesgo la vida, es la técnica más realizada a nivel mundial con mejores resultados en cuanto a la pérdida de peso y para mejorar la situación de enfermedades asociadas como la diabetes tipo 2.",
         "Es importante que el paciente reciba y siga al pie de la letra un plan alimenticio indicado por un nutriólogo ya que la dieta es un factor que influye directamente en el resultado del procedimiento para que sea exitoso.",
       ],
-      imageSrc:
-        "",
+      imageSrc: "/service/BypassGastrico.webp", // Asegúrate de que la extensión sea correcta
       imageAlt: "Ilustración de bypass gástrico",
     },
     {
@@ -24,8 +23,7 @@ export default function ServicesSection() {
         "La manga gástrica es una técnica restrictiva que no solo reduce el tamaño del estómago sino que también disminuye la producción de hormonas relacionadas con el hambre.",
         "Es un procedimiento mínimamente invasivo que se realiza por laparoscopía, lo que permite una recuperación más rápida.",
       ],
-      imageSrc:
-        "",
+      imageSrc: "/service/MangaG.webp", // Asegúrate de que la imagen exista
       imageAlt: "Ilustración de manga gástrica",
     },
     {
@@ -37,7 +35,7 @@ export default function ServicesSection() {
         "La cirugía es segura y efectiva, permitiendo que el paciente continúe su vida normal sin la vesícula biliar.",
         "Después de la cirugía, la mayoría de las personas pueden regresar a sus actividades normales en aproximadamente una semana.",
       ],
-      imageSrc: "",
+      imageSrc: "/service/Colecistectomia.webp", // Asegúrate de que la imagen exista
       imageAlt: "Ilustración de colecistectomía",
     },
     {
@@ -49,10 +47,10 @@ export default function ServicesSection() {
         "Se utiliza una malla especial para reforzar la pared abdominal y prevenir futuras hernias.",
         "La mayoría de los pacientes pueden regresar a sus actividades normales en poco tiempo, con excelentes resultados a largo plazo.",
       ],
-      imageSrc: "",
+      imageSrc: "/service/HIL.webp", // Asegúrate de que la imagen exista
       imageAlt: "Ilustración de hernia inguinal laparoscópica",
     },
-  ]
+  ];
 
   return (
     <div className="w-full bg-white py-16">
@@ -67,6 +65,5 @@ export default function ServicesSection() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

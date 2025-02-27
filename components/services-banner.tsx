@@ -7,25 +7,25 @@ const services = [
     id: "bypass",
     name: "Bypass Gástrico",
     icon: <FaHeart className="w-12 h-12 text-white" />,
-    href: "/service",
+    href: "#bypassg",
   },
   {
     id: "manga",
     name: "Manga Gástrica",
     icon: <FaStethoscope className="w-12 h-12 text-white" />,
-    href: "/service",
+    href: "#mangag",
   },
   {
     id: "banda",
     name: "Banda Gástrica",
     icon: <FaWeight className="w-12 h-12 text-white" />,
-    href: "/servicie",
+    href: "#bandag",
   },
   {
     id: "balon",
     name: "Balón Gástrico",
     icon: <FaMedkit className="w-12 h-12 text-white" />,
-    href: "/service",
+    href: "#balong",
   },
 ];
 

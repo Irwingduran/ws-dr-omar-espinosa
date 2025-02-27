@@ -9,34 +9,32 @@ import Autoplay from "embla-carousel-autoplay"
 
 const galleryItems = [
   {
-    id: 1,
-    type: "before-after",
-    title: "Bypass Gástrico - 6 Meses",
-    description: "Resultados después de 6 meses de cirugía de bypass gástrico",
-    imageBefore: "/placeholder.svg?height=600&width=400",
-    imageAfter: "/placeholder.svg?height=600&width=400",
-  },
-  {
     id: 2,
     type: "facility",
-    title: "Quirófano Hospital ABC Santa Fe",
-    description: "Instalaciones de última generación",
-    image: "/placeholder.svg?height=600&width=800",
-  },
-  {
-    id: 3,
-    type: "before-after",
-    title: "Manga Gástrica - 1 Año",
-    description: "Transformación después de 1 año de manga gástrica",
-    imageBefore: "/placeholder.svg?height=600&width=400",
-    imageAfter: "/placeholder.svg?height=600&width=400",
+    title: "",
+    description: "",
+    image: "/gallery/img1.jpg",
   },
   {
     id: 4,
     type: "facility",
-    title: "Consulta Externa",
-    description: "Consultorio equipado con tecnología de vanguardia",
-    image: "/placeholder.svg?height=600&width=800",
+    title: "",
+    description: "",
+    image: "/gallery/img2.jpg",
+  },
+  {
+    id: 3,
+    type: "facility",
+    title: "",
+    description: "",
+    image: "/gallery/img3.jpg",
+  },
+  {
+    id: 5,
+    type: "facility",
+    title: "",
+    description: "",
+    image: "/gallery/img4.jpg",
   },
 ]
 
@@ -61,40 +59,13 @@ export default function GallerySection() {
               {galleryItems.map((item) => (
                 <div key={item.id} className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-4">
                   <div className="relative group cursor-pointer" onClick={() => setSelectedImage(item.id)}>
-                    {item.type === "before-after" ? (
-                      <div className="relative">
-                        <div className="grid grid-cols-2 gap-2">
-                          <div className="relative overflow-hidden rounded-lg">
-                            <img
-                              src={item.imageBefore || "/placeholder.svg"}
-                              alt="Antes"
-                              className="w-full h-64 object-cover transition-transform group-hover:scale-105"
-                            />
-                            <div className="absolute bottom-2 left-2 bg-black/70 text-white px-2 py-1 text-sm rounded">
-                              Antes
-                            </div>
-                          </div>
-                          <div className="relative overflow-hidden rounded-lg">
-                            <img
-                              src={item.imageAfter || "/placeholder.svg"}
-                              alt="Después"
-                              className="w-full h-64 object-cover transition-transform group-hover:scale-105"
-                            />
-                            <div className="absolute bottom-2 left-2 bg-black/70 text-white px-2 py-1 text-sm rounded">
-                              Después
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="relative overflow-hidden rounded-lg">
-                        <img
-                          src={item.image || "/placeholder.svg"}
-                          alt={item.title}
-                          className="w-full h-64 object-cover transition-transform group-hover:scale-105"
-                        />
-                      </div>
-                    )}
+                    <div className="relative overflow-hidden rounded-lg">
+                      <img
+                        src={item.image || "/placeholder.svg"}
+                        alt={item.title}
+                        className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                      />
+                    </div>
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <div className="text-white text-center p-4">
                         <h3 className="text-lg font-medium mb-2">{item.title}</h3>
@@ -139,32 +110,11 @@ export default function GallerySection() {
             </Button>
             {selectedImage && (
               <div className="p-4">
-                {galleryItems.find((item) => item.id === selectedImage)?.type === "before-after" ? (
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <img
-                        src={galleryItems.find((item) => item.id === selectedImage)?.imageBefore || "/placeholder.svg"}
-                        alt="Antes"
-                        className="w-full rounded-lg"
-                      />
-                      <p className="text-white text-center mt-2">Antes</p>
-                    </div>
-                    <div>
-                      <img
-                        src={galleryItems.find((item) => item.id === selectedImage)?.imageAfter || "/placeholder.svg"}
-                        alt="Después"
-                        className="w-full rounded-lg"
-                      />
-                      <p className="text-white text-center mt-2">Después</p>
-                    </div>
-                  </div>
-                ) : (
-                  <img
-                    src={galleryItems.find((item) => item.id === selectedImage)?.image || "/placeholder.svg"}
-                    alt={galleryItems.find((item) => item.id === selectedImage)?.title}
-                    className="w-full rounded-lg"
-                  />
-                )}
+                <img
+                  src={galleryItems.find((item) => item.id === selectedImage)?.image || "/placeholder.svg"}
+                  alt={galleryItems.find((item) => item.id === selectedImage)?.title}
+                  className="w-full rounded-lg"
+                />
                 <div className="text-white text-center mt-4">
                   <h3 className="text-xl font-medium mb-2">
                     {galleryItems.find((item) => item.id === selectedImage)?.title}
@@ -179,4 +129,3 @@ export default function GallerySection() {
     </section>
   )
 }
-
