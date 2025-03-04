@@ -9,7 +9,7 @@ import { Loader2, MapPin, Clock, Phone, Mail } from "lucide-react"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
-import { useToast } from "../hooks/use-toast" // Updated import
+import { useToast } from "../app/hooks/use-toast" // Updated import
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
 
 const formSchema = z.object({

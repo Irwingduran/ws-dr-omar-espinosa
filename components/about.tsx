@@ -1,6 +1,3 @@
-import { Button } from "./ui/button";
-import aboutImg from "../app/assets/about-img.png";
-
 export default function About() {
   return (
     <div className="w-full bg-white py-16">
@@ -21,16 +18,23 @@ export default function About() {
                 pacientes, ofreciendo soluciones quirúrgicas avanzadas y seguras.
               </p>
             </div>
-          
           </div>
 
-          {/* Imagen (intercambiada a la izquierda en pantallas md y mayores) */}
+          {/* Video (intercambiado a la izquierda en pantallas md y mayores) */}
           <div className="relative md:order-1">
-            <img
-              src={aboutImg.src}
-              alt="Surgical procedure demonstration"
-              className="w-full rounded-lg shadow-lg"
-            />
+            <div className="aspect-square w-full max-w-[500px] mx-auto"> {/* Contenedor cuadrado */}
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=500&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1820883811758217%2F&show_text=false&width=500&t=0"
+                width="100%"
+                height="100%"
+                style={{ border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                frameBorder="0"
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                className="w-full h-full rounded-lg shadow-lg"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
