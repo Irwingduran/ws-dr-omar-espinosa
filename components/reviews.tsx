@@ -9,24 +9,35 @@ import Autoplay from "embla-carousel-autoplay"
 
 const reviews = [
   {
-    name: "María González",
-    procedure: "Bypass Gástrico",
+    name: "Dennis Trujillo",
+    procedure: "Paciente",
     rating: 5,
-    date: "Enero 2024",
-    location: "CDMX",
+    date: "Febrero 2025",
+    location: "",
     comment:
-      "Mi experiencia con el Dr. Espinosa fue extraordinaria. Los resultados han superado mis expectativas.",
+      "Excelente atención, desde la consulta uno explica paso a paso las opciones de cirugías, así como el proceso que se debe llevar antes y después, en general el Dr. es muy paciente y empático. Lo recomiendo.",
     image: "icon/cuenta.png",
     verified: true,
   },
   {
-    name: "Roberto Méndez",
-    procedure: "Manga Gástrica",
+    name: "Oscar Manuel Camino Gutiérrez",
+    procedure: "Paciente",
     rating: 5,
-    date: "Diciembre 2023",
-    location: "Cancún",
+    date: "Diciembre 2024",
+    location: "",
     comment:
-      "Después de investigar mucho, elegí al Dr. Espinosa para mi cirugía. Han pasado 6 meses y los resultados son increíbles.",
+      "Excelente atención del doctor Espinosa y todo su equipo, muy profesional y con mucha empatía y calidad humana, siempre atento a las necesidades de uno como paciente, su atención previa, durante y después de la cirugía es impecable. El hospital (Puebla) excelente también , personal atento, profesional y con vocación de servicio, instalaciones cómodas y modernas, y sorpresa ! Comida sabrosa y natural nada de cajitas! Felicidades al doctor Omar Espinosa por devolverle a la medicina la calidez humana que tanto se ha perdido.",
+    image: "icon/cuenta.png",
+    verified: true,
+  },
+  {
+    name: "Jose De Jesus Martinez Dominguez",
+    procedure: "Paciente",
+    rating: 5,
+    date: "Diciembre 2024",
+    location: "",
+    comment:
+      "Muy buena atención. Excelente explicación antes y después de mi cirugía; se nota la experiencia. El doctor pendiente en todo momento, muy a gusto con el buen trato.",
     image: "icon/cuenta.png",
     verified: true,
   },
@@ -43,7 +54,7 @@ export default function ReviewsSection() {
   }, [emblaApi])
 
   return (
-    <section className="w-full py-16 bg-gray-50">
+    <section className="w-full py-16 bg-gray-50" id="resenas">
       <div className="container mx-auto px-4 max-w-4xl text-center">
         <h2 className="text-3xl font-light text-gray-900 mb-6">Experiencias de Nuestros Pacientes</h2>
         <div className="relative overflow-hidden" ref={emblaRef}>
@@ -79,15 +90,22 @@ export default function ReviewsSection() {
             <ChevronRight className="h-5 w-5" />
           </Button>
         </div>
-        {/* Sección para dejar un comentario */}
-        <div className="mt-8 text-center">
-          <p className="text-lg text-gray-800 mb-2">
+
+        {/* Banner para dejar un comentario */}
+        <div className="mt-8 bg-[#020043] text-white py-8 px-6 rounded-lg shadow-lg text-center">
+          <h3 className="text-2xl font-bold mb-4">¡Tu opinión nos importa!</h3>
+          <p className="text-lg mb-6">
             ¿Has tenido una experiencia con el Dr. Espinosa? ¡Déjanos tu opinión en Google!
           </p>
           <Button
             variant="default"
-            className="bg-yellow-500 text-white hover:bg-yellow-600 uppercase px-6 py-3 text-sm font-medium"
-            onClick={() => window.open("https://g.page/r/CODIGO_DE_GOOGLE_BUSINESS/review", "_blank")}
+            className="bg-yellow-500 text-white hover:bg-[#e5a600] hover:text-white uppercase px-6 py-3 text-sm font-medium transition-colors"
+            onClick={() =>
+              window.open(
+                "https://www.google.com/search?q=dr+omar+espinosa+gonzalez&oq=dr+omar+espinosa&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyEAgBEC4YrwEYxwEYgAQYjgUyBggCEEUYOTIICAMQABgWGB4yCAgEEAAYFhgeMgYIBRBFGDwyBggGEEUYPTIGCAcQRRg80gEINDUzNmowajeoAgiwAgHxBavie7--I0ma8QWr4nu_viNJmg&sourceid=chrome&ie=UTF-8",
+                "_blank"
+              )
+            }
           >
             Dejar un comentario
           </Button>

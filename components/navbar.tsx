@@ -51,6 +51,9 @@ export default function Navbar() {
           <Link href="/#service" className="text-white hover:text-[#0066B3]">
             Servicios
           </Link>
+          <Link href="/#resenas" className="text-white hover:text-[#0066B3]">
+            Reseñas
+          </Link>
           <Link href="/#contact" className="text-white hover:text-[#0066B3]">
             Contacto
           </Link>

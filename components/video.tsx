@@ -4,7 +4,7 @@ export default function VideoSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-light text-gray-900 mb-4">¿Qué hace un cirujano Bariátra?</h2>
+            <h2 className="text-4xl font-light text-gray-900 mb-4">¿Qué hace un cirujano Bariatra?</h2>
             <p className="text-lg text-gray-600">
               Conozca más sobre los procedimientos y el trabajo de un cirujano bariátrico certificado
             </p>

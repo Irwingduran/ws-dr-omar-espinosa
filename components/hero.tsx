@@ -3,7 +3,7 @@ import imgHero from '../app/assets/dr-omar-es.jpg';
 
 export default function HeroSection() {
   return (
-    <div className="w-full bg-[#E6E6E6] py-16">
+    <div className="w-full bg-[#E6E6E6] py-24">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
@@ -15,7 +15,7 @@ export default function HeroSection() {
             <p className="text-gray-600 mb-6 text-lg">
             El Dr. Omar Espinosa es especialista en Cirugía General, Cirugía Laparoscópica Avanzada y Cirugía Bariátrica.
             </p>
-            <a href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
+            <a href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
             <Button className="bg-[#FFB800] text-white hover:bg-[#e5a600] text-lg px-8">Agendar Cita</Button></a>
           </div>
           <div className="relative">

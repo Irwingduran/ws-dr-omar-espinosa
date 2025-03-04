@@ -90,7 +90,7 @@ export default function EnhancedFooter() {
         {/* Bottom Copyright */}
         <div className="mt-16 pt-8 border-t border-white/10">
           <p className="text-white/60 text-sm text-center">
-            © {new Date().getFullYear()} <a href="http://delta-digital.com.mx/" className="hover:text-yellow-400">Delta Agencia</a>. Todos los derechos reservados.
+            © {new Date().getFullYear()} Delta <a href="https://marketingmedicos.com.mx/" className="hover:text-yellow-400">by Imagen Médica </a>. Todos los derechos reservados.
           </p>
         </div>
       </div>
