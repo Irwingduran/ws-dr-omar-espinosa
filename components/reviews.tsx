@@ -102,7 +102,7 @@ export default function ReviewsSection() {
             className="bg-yellow-500 text-white hover:bg-[#e5a600] hover:text-white uppercase px-6 py-3 text-sm font-medium transition-colors"
             onClick={() =>
               window.open(
-                "https://maps.app.goo.gl/wr4HmbDLBLPPHzX29",
+                "https://www.google.com.mx/maps/place/Dr.+Omar+Espinosa.+Cirujano+General,+Cirujano+Bari%C3%A1tra+Certificado+En+Puebla/@19.0304509,-98.2309738,17z/data=!4m8!3m7!1s0x85cfc09a657d161d:0x5ad2317c62666b1d!8m2!3d19.0304509!4d-98.2283989!9m1!1b1!16s%2Fg%2F11f01vdbhb?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D",
                 "_blank"
               )
             }
