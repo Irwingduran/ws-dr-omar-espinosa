@@ -44,7 +44,7 @@ export default function ServiceCard({
         {/* Botón "Ver Más" para expandir/colapsar la descripción */}
         <Button
           variant="ghost"
-          className="mt-4 text-[#0066B3] hover:text-[#0066B3] hover:bg-blue-50 p-0"
+          className="mt-4 text-[#000] hover:text-[#FFB800] hover:bg-blue-50 p-0"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           <Plus className="w-4 h-4 mr-2" />
@@ -55,7 +55,7 @@ export default function ServiceCard({
         <Link href={landingUrl} passHref>
           <Button
             variant="outline"
-            className="mt-4 ml-4 bg-[#0066B3] text-white hover:bg-[#0056A3]"
+            className="mt-4 ml-4 bg-[#FFB800] text-white hover:bg-yellow-400"
           >
             Más Información
           </Button>

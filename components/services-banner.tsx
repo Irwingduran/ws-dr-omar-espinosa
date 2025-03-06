@@ -7,25 +7,25 @@ const services = [
     id: "bypass",
     name: "Bypass Gástrico",
     icon: <FaHeart className="w-12 h-12 text-white" />,
-    href: "#bypassg", // Coincide con el ID en ServicesSection
+    href: "/service1", // Coincide con el ID en ServicesSection
   },
   {
     id: "manga",
     name: "Manga Gástrica",
     icon: <FaStethoscope className="w-12 h-12 text-white" />,
-    href: "#mangag", // Coincide con el ID en ServicesSection
+    href: "/service2", // Coincide con el ID en ServicesSection
   },
   {
     id: "colecistectomia",
     name: "Colecistectomia",
     icon: <FaWeight className="w-12 h-12 text-white" />,
-    href: "#colecistectomiaa", // Coincide con el ID en ServicesSection
+    href: "/service3", // Coincide con el ID en ServicesSection
   },
   {
     id: "hil",
     name: "Hernia Inguinal Laparoscópica",
     icon: <FaMedkit className="w-12 h-12 text-white" />,
-    href: "#HIL", // Coincide con el ID en ServicesSection
+    href: "/service4", // Coincide con el ID en ServicesSection
   },
 ];
 
