@@ -13,7 +13,7 @@ import EnhancedFooter from "../components/enhanced"
 import WhatsAppButton from "../components/social-media-buttons"
 import Mockup from "../components/mockup"
 import Carousel from "../components/carousel"
-
+import Partners from "../components/partners"
 export default function Home() {
   return (
     <>
@@ -23,6 +23,9 @@ export default function Home() {
         <HeroSection />
         <div id="about">
         <AboutSection />
+        </div>
+        <div>
+        <GallerySection />
         </div>
         <div id="service">
         <ServicesBanner />
@@ -34,9 +37,11 @@ export default function Home() {
         <Mockup/>
         <FAQSection />
         <LocationsSection />
-        <GallerySection />
         <div id="contact">
         <ContactSection />
+        </div>
+        <div>
+          <Partners/>
         </div>
       </main>
       <EnhancedFooter />
