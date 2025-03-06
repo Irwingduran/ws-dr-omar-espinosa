@@ -6,7 +6,7 @@ export default function ServicesSection() {
       id: "bypassg",
       title: "Bypass Gástrico",
       shortDescription:
-        "El bypass gástrico, es un tipo de cirugía de pérdida de peso que implica crear un pequeño estómago y conectarlo directamente con el intestino delgado.",
+        "El bypass gástrico es un tipo de cirugía de pérdida de peso que implica crear un pequeño estómago y conectarlo directamente con el intestino delgado.",
       fullDescription: [
         "Después del bypass gástrico, los alimentos ingeridos entrarán en este pequeño estómago y luego pasarán directamente al intestino delgado, evitando la mayor parte del estómago y la primera sección del intestino delgado.",
         "El bypass gástrico ayuda a reducir el riesgo de tener problemas de salud relacionados con el peso que pueden poner en riesgo la vida, es la técnica más realizada a nivel mundial con mejores resultados en cuanto a la pérdida de peso y para mejorar la situación de enfermedades asociadas como la diabetes tipo 2.",
@@ -14,7 +14,7 @@ export default function ServicesSection() {
       ],
       imageSrc: "/service/BypassGastrico.webp",
       imageAlt: "Ilustración de bypass gástrico",
-      landingUrl: "/service1", 
+      landingUrl: "/service1",
     },
     {
       id: "mangag",
@@ -28,11 +28,11 @@ export default function ServicesSection() {
       ],
       imageSrc: "/service/MangaG.webp",
       imageAlt: "Ilustración de manga gástrica",
-      landingUrl: "/service2", 
+      landingUrl: "/service2",
     },
     {
       id: "colecistectomiaa",
-      title: "Colecistectomia",
+      title: "Colecistectomía",
       shortDescription:
         "La colecistectomía es la cirugía para extraer la vesícula biliar, generalmente debido a cálculos biliares que causan dolor y otros síntomas.",
       fullDescription: [
@@ -42,7 +42,7 @@ export default function ServicesSection() {
       ],
       imageSrc: "/service/Colecistectomia.webp",
       imageAlt: "Ilustración de colecistectomía",
-      landingUrl: "/service3", 
+      landingUrl: "/service3",
     },
     {
       id: "HIL",
@@ -56,7 +56,7 @@ export default function ServicesSection() {
       ],
       imageSrc: "/service/HIL.webp",
       imageAlt: "Ilustración de hernia inguinal laparoscópica",
-      landingUrl: "/service4", 
+      landingUrl: "/service4",
     },
   ];
 
@@ -65,9 +65,15 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="space-y-8">
           {services.map((service, index) => (
-            <div key={service.id} id={service.id}> {/* Usamos el ID */}
-              <ServiceCard {...service} />
-              {index < services.length - 1 && <div className="border-t border-gray-200" />}
+            <div key={service.id} id={service.id}>
+              <ServiceCard
+                {...service}
+                imagePosition={index % 2 === 0 ? "left" : "right"}
+              />
+              {/* Separador entre servicios */}
+              {index < services.length - 1 && (
+                <div className="border-t border-gray-200 my-8" />
+              )}
             </div>
           ))}
         </div>

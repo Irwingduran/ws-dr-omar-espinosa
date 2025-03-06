@@ -12,6 +12,7 @@ import ContactSection from "../components/contact"
 import EnhancedFooter from "../components/enhanced"
 import WhatsAppButton from "../components/social-media-buttons"
 import Mockup from "../components/mockup"
+import Carousel from "../components/carousel"
 
 export default function Home() {
   return (
@@ -27,12 +28,13 @@ export default function Home() {
         <ServicesBanner />
         </div>
         <ServicesSection />
+        <Carousel/>
         <VideoSection />
-        <GallerySection />
         <ReviewsSection />
         <Mockup/>
         <FAQSection />
         <LocationsSection />
+        <GallerySection />
         <div id="contact">
         <ContactSection />
         </div>
