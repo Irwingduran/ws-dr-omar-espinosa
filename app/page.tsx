@@ -11,7 +11,6 @@ import LocationsSection from "../components/locations"
 import ContactSection from "../components/contact"
 import EnhancedFooter from "../components/enhanced"
 import WhatsAppButton from "../components/social-media-buttons"
-import CookieConsent from "../components/cookie"
 import Mockup from "../components/mockup"
 
 export default function Home() {
@@ -40,7 +39,6 @@ export default function Home() {
       </main>
       <EnhancedFooter />
       <WhatsAppButton />
-      <CookieConsent />
     </>
   )
 }

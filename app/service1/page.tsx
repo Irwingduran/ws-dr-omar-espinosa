@@ -36,8 +36,8 @@ export default function BypassGastricoPage() {
       <Navbar />
       <div className="w-full bg-white">
         {/* Hero Section */}
-        <div className="relative h-[400px] bg-[#E6E6E6] flex items-center justify-center">
-          <div className="text-center text-black">
+        <div className="relative h-[400px] bg-[#0066B3] flex items-center justify-center">
+          <div className="text-center text-white">
             <h1 className="text-5xl font-light mb-4">Bypass Gástrico</h1>
             <p className="text-lg">
               Una solución avanzada para la pérdida de peso y la mejora de la salud.
@@ -184,7 +184,7 @@ export default function BypassGastricoPage() {
               No solo verás cambios físicos, también recuperarás energía, confianza y salud.
             </p>
             <Link href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
-              <Button className="bg-[#0066B3] text-white hover:bg-[#0056A3] px-8 py-4">
+              <Button className="bg-[#FFB800] text-white hover:bg-[#0056A3] px-8 py-4">
                 Agenda tu Valoración
               </Button>
             </Link>
