@@ -102,7 +102,7 @@ export default function ReviewsSection() {
             className="bg-yellow-500 text-white hover:bg-[#e5a600] hover:text-white uppercase px-6 py-3 text-sm font-medium transition-colors"
             onClick={() =>
               window.open(
-                "https://www.google.com/search?q=dr+omar+espinosa+gonzalez&oq=dr+omar+espinosa&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyEAgBEC4YrwEYxwEYgAQYjgUyBggCEEUYOTIICAMQABgWGB4yCAgEEAAYFhgeMgYIBRBFGDwyBggGEEUYPTIGCAcQRRg80gEINDUzNmowajeoAgiwAgHxBavie7--I0ma8QWr4nu_viNJmg&sourceid=chrome&ie=UTF-8",
+                "https://maps.app.goo.gl/wr4HmbDLBLPPHzX29",
                 "_blank"
               )
             }
