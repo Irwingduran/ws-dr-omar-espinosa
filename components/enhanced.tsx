@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react"
 import logo from "../app/Logo.png"
+import { FaTiktok } from "react-icons/fa"
 
 export default function EnhancedFooter() {
   const locations = [
@@ -41,6 +42,14 @@ export default function EnhancedFooter() {
                 className="bg-white/10 hover:bg-white/20 transition-colors p-3 rounded-full"
               >
                 <Instagram className="w-6 h-6 text-white" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@drespinosabariatra?_t=8naCuDgx1Bl&_r=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 transition-colors p-3 rounded-full"
+              >
+                <FaTiktok className="w-6 h-6 text-white" />
               </a>
             </div>
           </div>
