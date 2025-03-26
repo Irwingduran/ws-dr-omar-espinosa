@@ -1,15 +1,16 @@
 "use client"
 
+import { useState } from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import { Button } from "../../components/ui/button"
+import { Button } from "../components/ui/button"
 import Link from "next/link"
-import Navbar from "../../components/navbar"
-import Footer from "../../components/enhanced"
+import Navbar from "../components/navbar"
+import Footer from "../components/enhanced"
 
 export default function BypassGastricoPage() {
-  // Configuración del carrusel
+  // Carousel configuration
   const settings = {
     dots: true,
     infinite: true,
@@ -19,10 +20,10 @@ export default function BypassGastricoPage() {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    adaptiveHeight: true, // Ajusta la altura automáticamente según el contenido
+    adaptiveHeight: true,
   }
 
-  // URLs de los videos de Facebook
+  // Facebook video URLs
   const videos = [
     "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F842349414485330%2F&show_text=false&width=267&t=0",
     "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F248244954591421%2F&show_text=false&width=267&t=0",
@@ -36,20 +37,20 @@ export default function BypassGastricoPage() {
       <div className="w-full bg-white">
         {/* Hero Section */}
         <div className="relative w-full h-[300px] md:h-[400px] bg-[#0066B3] flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-3xl md:text-5xl font-light mb-4">Bypass Gástrico</h1>
+          <div className="text-center text-white px-4">
+            <h1 className="text-3xl md:text-5xl font-light mb-4">Gastric Bypass</h1>
             <p className="text-base md:text-lg">
-              Una solución avanzada para la pérdida de peso y la mejora de la salud.
+              An advanced solution for weight loss and health improvement.
             </p>
           </div>
         </div>
 
-        {/* Contenido Principal */}
-        <div className="container mx-auto px-4 py-16">
-          {/* Descripción del Servicio */}
+        {/* Main Content */}
+        <div className="container mx-auto px-4 sm:px-6 py-16">
+          {/* Service Description */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
-            {/* Carrusel de videos */}
-            <div className="relative w-full max-w-md mx-auto">
+            {/* Video carousel - Updated with responsive container */}
+          <div className="relative w-full max-w-md mx-auto">
   <Slider {...settings}>
     {videos.map((video, index) => (
       <div key={index} className="w-full">
@@ -69,124 +70,124 @@ export default function BypassGastricoPage() {
   </Slider>
 </div>
 
-            {/* Texto */}
+            {/* Text */}
             <div>
-              <h2 className="text-3xl font-light text-gray-800 mb-6">
-                ¿Qué es el Bypass Gástrico?
+              <h2 className="text-2xl md:text-3xl font-light text-gray-800 mb-6">
+                What is Gastric Bypass?
               </h2>
               <div className="prose prose-lg text-gray-600">
                 <p>
-                  El bypass gástrico laparoscópico es un procedimiento que no solo ayuda a perder
-                  peso, sino que también mejora problemas como:
+                  Laparoscopic gastric bypass is a procedure that not only helps with weight loss,
+                  but also improves conditions such as:
                 </p>
                 <ul className="list-disc pl-6">
-                  <li>Diabetes tipo 2.</li>
-                  <li>Hipertensión arterial.</li>
-                  <li>Colesterol alto y apnea del sueño.</li>
+                  <li>Type 2 diabetes.</li>
+                  <li>High blood pressure.</li>
+                  <li>High cholesterol and sleep apnea.</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* ¿Cómo funciona? */}
+          {/* How does it work? */}
           <div className="mt-16">
-            <h2 className="text-3xl font-light text-gray-800 mb-6 text-center">
-              ¿Cómo Funciona el Bypass Gástrico?
+            <h2 className="text-2xl md:text-3xl font-light text-gray-800 mb-6 text-center">
+              How Does Gastric Bypass Work?
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Paso 1 */}
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+              {/* Step 1 */}
               <div className="flex items-start gap-4">
                 <div className="text-black rounded-full w-12 h-12 flex items-center justify-center">
                   <span className="text-xl">1</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    Reducción del Estómago
+                    Stomach Reduction
                   </h3>
                   <p className="text-gray-600">
-                    Se crea un pequeño estómago que redirige el tránsito de los alimentos, reduciendo
-                    la absorción de calorías.
+                    A small stomach is created that redirects food transit, reducing
+                    calorie absorption.
                   </p>
                 </div>
               </div>
 
-              {/* Paso 2 */}
+              {/* Step 2 */}
               <div className="flex items-start gap-4">
                 <div className="text-black rounded-full w-12 h-12 flex items-center justify-center">
                   <span className="text-xl">2</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    Cambio en la Digestión
+                    Change in Digestion
                   </h3>
                   <p className="text-gray-600">
-                    Este método no solo reduce el tamaño del estómago, sino que también altera la
-                    forma en la que los alimentos recorren el sistema digestivo, ayudando a los
-                    pacientes a sentir saciedad con menos comida y absorber menos calorías.
+                    This method not only reduces stomach size but also alters how
+                    food travels through the digestive system, helping patients feel
+                    full with less food and absorb fewer calories.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Beneficios */}
+          {/* Benefits */}
           <div className="mt-16">
-            <h2 className="text-3xl font-light text-gray-800 mb-8 text-center">
-              Beneficios del Bypass Gástrico
+            <h2 className="text-2xl md:text-3xl font-light text-gray-800 mb-8 text-center">
+              Benefits of Gastric Bypass
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Beneficio 1 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {/* Benefit 1 */}
               <div className="text-center">
                 <div className="bg-[#0066B3] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">1</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  Pérdida de Peso Sostenida
+                  Sustained Weight Loss
                 </h3>
                 <p className="text-gray-600">
-                  Ayuda a perder peso de forma saludable y a largo plazo.
+                  Helps lose weight in a healthy and long-term way.
                 </p>
               </div>
 
-              {/* Beneficio 2 */}
+              {/* Benefit 2 */}
               <div className="text-center">
                 <div className="bg-[#0066B3] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">2</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  Procedimiento Mínimamente Invasivo
+                  Minimally Invasive Procedure
                 </h3>
                 <p className="text-gray-600">
-                  Técnica laparoscópica con una recuperación más rápida y menos dolor.
+                  Laparoscopic technique with faster recovery and less pain.
                 </p>
               </div>
 
-              {/* Beneficio 3 */}
+              {/* Benefit 3 */}
               <div className="text-center">
                 <div className="bg-[#0066B3] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">3</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  Mejora de la Salud General
+                  Overall Health Improvement
                 </h3>
                 <p className="text-gray-600">
-                  Reduce o elimina problemas como la diabetes, la hipertensión y la apnea del sueño.
+                  Reduces or eliminates problems like diabetes, hypertension, and sleep apnea.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Llamado a la Acción */}
+          {/* Call to Action */}
           <div className="mt-16 text-center">
-            <h2 className="text-3xl font-light text-gray-800 mb-4">
-              ¿Sabías que este procedimiento cambia vidas?
+            <h2 className="text-2xl md:text-3xl font-light text-gray-800 mb-4">
+              Did you know this procedure changes lives?
             </h2>
-            <p className="text-gray-600 mb-8">
-              No solo verás cambios físicos, también recuperarás energía, confianza y salud.
+            <p className="text-gray-600 mb-8 px-4">
+              You'll not only see physical changes, but you'll also regain energy, confidence, and health.
             </p>
             <Link href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
-              <Button className="bg-[#FFB800] text-white hover:bg-[#0056A3] px-8 py-4">
-                Agenda tu Valoración
+              <Button className="bg-[#FFB800] text-white hover:bg-[#0056A3] px-6 py-3 md:px-8 md:py-4">
+                Schedule Your Evaluation
               </Button>
             </Link>
           </div>

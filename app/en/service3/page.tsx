@@ -3,13 +3,13 @@
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import { Button } from "../../components/ui/button"
+import { Button } from "../components/ui/button"
 import Link from "next/link"
-import Navbar from "../../components/navbar"
-import Footer from "../../components/enhanced"
+import Navbar from "../components/navbar"
+import Footer from "../components/enhanced"
 
-export default function ColecistectomiaPage() {
-  // Configuración del carrusel
+export default function CholecystectomyPage() {
+  // Carousel settings
   const settings = {
     dots: true,
     infinite: true,
@@ -19,14 +19,13 @@ export default function ColecistectomiaPage() {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    adaptiveHeight: true, // Ajusta la altura automáticamente según el contenido
+    adaptiveHeight: true, // Automatically adjusts height based on content
   }
 
-  // URLs de los videos de Facebook
+  // Facebook video URLs
   const videos = [
     "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1192905808428170%2F&show_text=false&width=267&t=0", 
     "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2709135469291943%2F&show_text=false&width=267&t=0", //
-
   ]
 
   return (
@@ -36,18 +35,18 @@ export default function ColecistectomiaPage() {
         {/* Hero Section */}
         <div className="relative w-full h-[300px] md:h-[400px] bg-[#0066B3] flex items-center justify-center">
           <div className="text-center text-white px-4">
-            <h1 className="text-3xl md:text-5xl font-light mb-4">Colecistectomía</h1>
+            <h1 className="text-3xl md:text-5xl font-light mb-4">Cholecystectomy</h1>
             <p className="text-base md:text-lg">
-              Un procedimiento seguro para tratar problemas de la vesícula biliar.
+              A safe procedure to treat gallbladder problems.
             </p>
           </div>
         </div>
 
-        {/* Contenido Principal */}
-        <div className="container mx-auto px-4 sm:px-6 py-16">
-          {/* Descripción del Servicio */}
+        {/* Main Content */}
+        <div className="container mx-auto sm:px-6 px-4 py-16">
+          {/* Service Description */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
-            {/* Carrusel de videos */}
+            {/* Video Carousel */}
             <div className="relative w-full max-w-md mx-auto">
   <Slider {...settings}>
     {videos.map((video, index) => (
@@ -68,80 +67,80 @@ export default function ColecistectomiaPage() {
   </Slider>
 </div>
 
-            {/* Texto */}
+            {/* Text */}
             <div>
               <h2 className="text-3xl font-light text-gray-800 mb-6">
-                ¿Qué es la Colecistectomía?
+                What is a Cholecystectomy?
               </h2>
               <div className="prose prose-lg text-gray-600">
                 <p>
-                  La <strong>Colecistectomía</strong> es un procedimiento quirúrgico para extirpar la vesícula biliar, generalmente debido a la presencia de cálculos biliares que causan dolor, inflamación u otros síntomas.
+                  <strong>Cholecystectomy</strong> is a surgical procedure to remove the gallbladder, typically due to the presence of gallstones that cause pain, inflammation, or other symptoms.
                 </p>
                 <p>
-                  Este procedimiento se realiza mediante <strong>técnica laparoscópica</strong>, lo que significa que es mínimamente invasivo, con pequeñas incisiones y una recuperación más rápida.
+                  This procedure is performed using <strong>laparoscopic technique</strong>, meaning it's minimally invasive with small incisions and faster recovery.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Beneficios */}
+          {/* Benefits */}
           <div className="mt-16">
             <h2 className="text-3xl font-light text-gray-800 mb-8 text-center">
-              Beneficios de la Colecistectomía
+              Benefits of Cholecystectomy
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Beneficio 1 */}
+              {/* Benefit 1 */}
               <div className="text-center">
                 <div className="bg-[#0066B3] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">1</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  Procedimiento Mínimamente Invasivo
+                  Minimally Invasive Procedure
                 </h3>
                 <p className="text-gray-600">
-                  La técnica laparoscópica reduce el dolor postoperatorio y permite una recuperación más rápida.
+                  The laparoscopic technique reduces postoperative pain and allows for faster recovery.
                 </p>
               </div>
 
-              {/* Beneficio 2 */}
+              {/* Benefit 2 */}
               <div className="text-center">
                 <div className="bg-[#0066B3] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">2</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  Sin Cicatrices Grandes
+                  No Large Scars
                 </h3>
                 <p className="text-gray-600">
-                  Las pequeñas incisiones hacen que las cicatrices sean casi imperceptibles.
+                  The small incisions make scars nearly imperceptible.
                 </p>
               </div>
 
-              {/* Beneficio 3 */}
+              {/* Benefit 3 */}
               <div className="text-center">
                 <div className="bg-[#0066B3] text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">3</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  Recuperación Rápida
+                  Quick Recovery
                 </h3>
                 <p className="text-gray-600">
-                  La mayoría de los pacientes pueden regresar a sus actividades normales en pocos días.
+                  Most patients can return to their normal activities within a few days.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Llamado a la Acción */}
+          {/* Call to Action */}
           <div className="mt-16 text-center">
             <h2 className="text-3xl font-light text-gray-800 mb-4">
-              ¿Necesitas una Colecistectomía?
+              Do You Need a Cholecystectomy?
             </h2>
             <p className="text-gray-600 mb-8">
-              Si experimentas dolor abdominal, náuseas u otros síntomas relacionados con la vesícula biliar, no esperes más. Agenda una consulta para evaluar tu caso.
+              If you're experiencing abdominal pain, nausea, or other gallbladder-related symptoms, don't wait any longer. Schedule a consultation to evaluate your case.
             </p>
             <Link href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
               <Button className="bg-[#FFB800] text-white hover:bg-[#0056A3] px-8 py-4">
-                Agenda tu Valoración
+                Schedule Your Evaluation
               </Button>
             </Link>
           </div>

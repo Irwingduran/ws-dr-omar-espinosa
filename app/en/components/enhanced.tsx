@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react"
-import logo from "../public/Logo.png"
+import logo from "../../../public/Logo.png"
 import { FaTiktok } from "react-icons/fa"
 
 export default function EnhancedFooter() {
@@ -13,12 +13,12 @@ export default function EnhancedFooter() {
 
   return (
     <footer className="relative">
-      {/* Gradient Background */}
+      {/* Fondo con gradiente */}
       <div className="absolute inset-0 bg-[#020043] opacity-90" />
 
       <div className="relative container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
-          {/* Left Column */}
+          {/* Columna izquierda */}
           <div className="space-y-8">
             <img src={logo.src} alt="logo" className="h-24" />
             <h2 className="text-1xl font-light text-white max-w-md">
@@ -54,7 +54,7 @@ export default function EnhancedFooter() {
             </div>
           </div>
 
-          {/* Right Column */}
+          {/* Columna derecha */}
           <div className="space-y-8">
             <div className="grid gap-6">
               <a
@@ -96,7 +96,7 @@ export default function EnhancedFooter() {
           </div>
         </div>
 
-        {/* Bottom Copyright */}
+        {/* Derechos de autor en la parte inferior */}
         <div className="mt-16 pt-8 border-t border-white/10">
           <p className="text-white/60 text-sm text-center">
             © {new Date().getFullYear()} Delta <a href="https://marketingmedicos.com.mx/" className="hover:text-yellow-400">by Imagen Médica </a>. Todos los derechos reservados.
@@ -106,4 +106,3 @@ export default function EnhancedFooter() {
     </footer>
   )
 }
-

@@ -5,27 +5,27 @@ import { FaHeart, FaStethoscope, FaWeight, FaMedkit } from "react-icons/fa";
 const services = [
   {
     id: "bypass",
-    name: "Bypass Gástrico",
+    name: "Gastric Bypass",
     icon: <FaHeart className="w-12 h-12 text-white" />,
-    href: "/service1", 
+    href: "/en/service1", 
   },
   {
     id: "manga",
-    name: "Manga Gástrica",
+    name: "Gastric Sleeve",
     icon: <FaStethoscope className="w-12 h-12 text-white" />,
-    href: "/service2", 
+    href: "/en/service2", 
   },
   {
     id: "colecistectomia",
-    name: "Colecistectomia",
+    name: "Cholecystectomy",
     icon: <FaWeight className="w-12 h-12 text-white" />,
-    href: "/service3", 
+    href: "/en/service3", 
   },
   {
     id: "hil",
-    name: "Hernia Inguinal Laparoscópica",
+    name: "Laparoscopic Inguinal Hernia Repair",
     icon: <FaMedkit className="w-12 h-12 text-white" />,
-    href: "/service4", 
+    href: "/en/service4", 
   },
 ];
 
@@ -34,7 +34,7 @@ export default function ServicesBanner() {
     <section className="w-full bg-white py-16 lg:py-24">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-light text-gray-800 text-center mb-16">
-          Nuestros Servicios
+          Our Services
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
@@ -52,7 +52,7 @@ export default function ServicesBanner() {
                   variant="outline"
                   className="bg-[#FFB800] text-white border-0 hover:bg-[#e5a600] uppercase text-sm px-8"
                 >
-                  Ver Más
+                  View More
                 </Button>
               </Link>
             </div>

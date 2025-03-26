@@ -35,10 +35,10 @@ const Carousel: React.FC = () => {
   return (
     <div className="py-16">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-800">Galería</h2>
+        <h2 className="text-3xl font-bold text-gray-800">Gallery</h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-2">
-         Amplia experiencia realizando cambios notables en la vida de mis pacientes que muestran sus resultados
-         obtenidos con la profesionalidad de mis servicios.
+          Extensive experience creating remarkable changes in my patients' lives, 
+          as shown by their results achieved through my professional services.
         </p>
       </div>
       <div className="relative w-full max-w-lg mx-auto">

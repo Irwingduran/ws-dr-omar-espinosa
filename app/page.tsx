@@ -14,6 +14,7 @@ import WhatsAppButton from "../components/social-media-buttons"
 import Mockup from "../components/mockup"
 import Carousel from "../components/carousel"
 import Partners from "../components/partners"
+import BMICalculator from "../components/bmi-calculator"
 export default function Home() {
   return (
     <>
@@ -25,18 +26,21 @@ export default function Home() {
         <AboutSection />
         </div>
         <div>
-        <GallerySection />
+       
         </div>
         <div id="service">
         <ServicesBanner />
         </div>
         <ServicesSection />
         <Carousel/>
+      
         <VideoSection />
+        <BMICalculator/>
         <ReviewsSection />
         <Mockup/>
         <FAQSection />
         <LocationsSection />
+        <GallerySection />
         <div id="contact">
         <ContactSection />
         </div>

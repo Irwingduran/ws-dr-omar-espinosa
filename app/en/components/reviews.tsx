@@ -10,34 +10,34 @@ import Autoplay from "embla-carousel-autoplay"
 const reviews = [
   {
     name: "Dennis Trujillo",
-    procedure: "Paciente",
+    procedure: "Patient",
     rating: 5,
-    date: "Febrero 2025",
+    date: "February 2025",
     location: "",
     comment:
-      "Excelente atención, desde la consulta uno explica paso a paso las opciones de cirugías, así como el proceso que se debe llevar antes y después, en general el Dr. es muy paciente y empático. Lo recomiendo.",
+      "Excellent attention, from the first consultation he explains step by step the surgery options, as well as the process before and after. In general, the doctor is very patient and empathetic. I recommend him.",
     image: "icon/cuenta.png",
     verified: true,
   },
   {
     name: "Oscar Manuel Camino Gutiérrez",
-    procedure: "Paciente",
+    procedure: "Patient",
     rating: 5,
-    date: "Diciembre 2024",
+    date: "December 2024",
     location: "",
     comment:
-      "Excelente atención del doctor Espinosa y todo su equipo, muy profesional y con mucha empatía y calidad humana, siempre atento a las necesidades de uno como paciente, su atención previa, durante y después de la cirugía es impecable. El hospital (Puebla) excelente también , personal atento, profesional y con vocación de servicio, instalaciones cómodas y modernas, y sorpresa ! Comida sabrosa y natural nada de cajitas! Felicidades al doctor Omar Espinosa por devolverle a la medicina la calidez humana que tanto se ha perdido.",
+      "Excellent attention from Dr. Espinosa and his entire team, very professional with great empathy and human quality, always attentive to the patient's needs. His care before, during and after surgery is impeccable. The hospital (Puebla) is also excellent, with attentive, professional staff with a service vocation, comfortable and modern facilities, and surprise! Tasty and natural food, no boxes! Congratulations to Dr. Omar Espinosa for bringing back the human warmth that medicine has lost.",
     image: "icon/cuenta.png",
     verified: true,
   },
   {
     name: "Jose De Jesus Martinez Dominguez",
-    procedure: "Paciente",
+    procedure: "Patient",
     rating: 5,
-    date: "Diciembre 2024",
+    date: "December 2024",
     location: "",
     comment:
-      "Muy buena atención. Excelente explicación antes y después de mi cirugía; se nota la experiencia. El doctor pendiente en todo momento, muy a gusto con el buen trato.",
+      "Very good attention. Excellent explanation before and after my surgery; his experience shows. The doctor was attentive at all times, very pleased with the good treatment.",
     image: "icon/cuenta.png",
     verified: true,
   },
@@ -56,9 +56,9 @@ export default function ReviewsSection() {
   return (
     <section className="w-full py-16 bg-gray-50" id="resenas">
       <div className="container mx-auto px-4 max-w-4xl text-center">
-        <h2 className="text-3xl font-light text-gray-900 mb-6">Experiencias de Nuestros Pacientes</h2>
+        <h2 className="text-3xl font-light text-gray-900 mb-6">Our Patients' Experiences</h2>
         
-        {/* Contenedor relativo para posicionar los botones */}
+        {/* Relative container for button positioning */}
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
@@ -86,7 +86,7 @@ export default function ReviewsSection() {
             </div>
           </div>
           
-          {/* Botones de navegación posicionados absolutamente */}
+          {/* Absolutely positioned navigation buttons */}
           <div className="flex justify-between w-full absolute top-1/2 -translate-y-1/2 px-2">
             <Button 
               variant="outline" 
@@ -107,11 +107,11 @@ export default function ReviewsSection() {
           </div>
         </div>
 
-        {/* Banner para dejar un comentario */}
+        {/* Comment banner */}
         <div className="mt-12 bg-[#020043] text-white py-8 px-6 rounded-lg shadow-lg text-center">
-          <h3 className="text-2xl font-bold mb-4">¡Tu opinión nos importa!</h3>
+          <h3 className="text-2xl font-bold mb-4">Your opinion matters to us!</h3>
           <p className="text-lg mb-6">
-            ¿Has tenido una experiencia con el Dr. Espinosa? ¡Déjanos tu opinión en Google!
+            Have you had an experience with Dr. Espinosa? Leave us your review on Google!
           </p>
           <Button
             variant="default"
@@ -123,7 +123,7 @@ export default function ReviewsSection() {
               )
             }
           >
-            Dejar un comentario
+            Leave a review
           </Button>
         </div>
       </div>

@@ -41,7 +41,7 @@ export default function ServiceCard({
         }`}
       >
         <h3 className="text-sm uppercase tracking-wide text-[#0066B3] mb-2">
-          NUESTROS SERVICIOS
+          OUR SERVICES
         </h3>
         <h2 className="text-4xl text-gray-800 font-light mb-6">{title}</h2>
         <div className="prose prose-lg text-gray-600">
@@ -55,14 +55,14 @@ export default function ServiceCard({
           )}
         </div>
 
-        {/* Botón "Ver Más" para expandir/colapsar la descripción */}
+
         <Button
           variant="ghost"
           className="mt-4 text-[#000] hover:text-[#FFB800] hover:bg-blue-50 p-0"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           <Plus className="w-4 h-4 mr-2" />
-          {isExpanded ? "Ver Menos" : "Ver Más"}
+          {isExpanded ? "View Less" : "View More"}
         </Button>
 
         {/* Botón para redirigir a la landing page */}
@@ -71,7 +71,7 @@ export default function ServiceCard({
             variant="outline"
             className="mt-4 ml-4 bg-[#FFB800] text-white hover:bg-yellow-400"
           >
-            Más Información
+            More Info
           </Button>
         </Link>
       </div>
