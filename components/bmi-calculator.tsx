@@ -276,12 +276,7 @@ const CalculadoraIMC: React.FC = () => {
           </div>
         </div>
 
-        <button
-          type="submit"
-          className="w-full bg-[#FFB800] text-white py-2 px-4 rounded-md hover:bg-[#e5a600] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#e5a600]"
-        >
-          Calcular IMC
-        </button>
+     
       </form>
 
       {esCirugiaBariatrica && (

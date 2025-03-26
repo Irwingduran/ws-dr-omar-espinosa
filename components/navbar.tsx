@@ -1,39 +1,25 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import logo from "../app/Logo.png";
-import { Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react"; // Iconos para el menú
+import logo from "../public/Logo.png";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // Estado para el menú móvil
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY) {
-        setVisible(false);
-        setMobileMenuOpen(false);
-      } else {
-        setVisible(true);
-      }
-
+      setVisible(currentScrollY <= lastScrollY);
       setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
 
   return (
     <nav
@@ -46,122 +32,60 @@ export default function Navbar() {
           <img src={logo.src} alt="Logo" className="h-12 w-auto" />
         </Link>
 
-        {/* Menú para desktop */}
+        {/* Botón de menú móvil */}
+        <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
+        {/* Menú de escritorio */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/" className="text-white hover:text-[#0066B3]">
-            Inicio
-          </Link>
-          <Link href="/#about" className="text-white hover:text-[#0066B3]">
-            Dr. Omar Espinosa
-          </Link>
-          <Link href="/#service" className="text-white hover:text-[#0066B3]">
-            Servicios
-          </Link>
-          <Link href="/#resenas" className="text-white hover:text-[#0066B3]">
-            Reseñas
-          </Link>
-          <Link href="/#contact" className="text-white hover:text-[#0066B3]">
-            Contacto
-          </Link>
-          
-          {/* Selector de idioma - Bandera USA */}
-          <Link 
-            href="/en" 
-            className="flex items-center justify-center w-8 h-8 rounded-full overflow-hidden border border-white hover:border-[#0066B3] transition-all"
-            title="English version"
-          >
-            {/* Bandera de USA (SVG inline) */}
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="40" height="20">
-              <clipPath id="t">
-                <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
-              </clipPath>
-              <path d="M0,0 v30 h60 v-30 z" fill="#00247d"/>
-              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-              <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#cf142b" stroke-width="4"/>
-              <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
-              <path d="M30,0 v30 M0,15 h60" stroke="#cf142b" stroke-width="6"/>
-            </svg>
+          <Link href="/" className="text-white hover:text-[#0066B3]">Inicio</Link>
+          <Link href="/#about" className="text-white hover:text-[#0066B3]">Dr. Omar Espinosa</Link>
+          <Link href="/#service" className="text-white hover:text-[#0066B3]">Servicios</Link>
+          <Link href="/#resenas" className="text-white hover:text-[#0066B3]">Reseñas</Link>
+          <Link href="/#contact" className="text-white hover:text-[#0066B3]">Contacto</Link>
+
+          {/* Bandera de EE.UU. con enlace a la versión en inglés */}
+          <Link href="/en" className="flex items-center gap-2 text-white hover:text-[#0066B3]">
+            🇺🇸
+            EN
           </Link>
 
           <Link href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
             <Button className="bg-[#FFB800] text-white hover:bg-[#e5a600]">Agendar Cita</Button>
           </Link>
         </div>
-
-        {/* Botón de menú para móvil */}
-        <div className="md:hidden flex items-center gap-4">
-          {/* Bandera USA en móvil (antes del botón de menú) */}
-          <Link 
-            href="/en" 
-            className="flex items-center justify-center w-8 h-8 rounded-full overflow-hidden border border-white hover:border-[#0066B3] transition-all"
-            title="English version"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="32" height="16">
-              <clipPath id="u">
-                <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
-              </clipPath>
-              <path d="M0,0 v30 h60 v-30 z" fill="#00247d"/>
-              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-              <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#u)" stroke="#cf142b" stroke-width="4"/>
-              <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
-              <path d="M30,0 v30 M0,15 h60" stroke="#cf142b" stroke-width="6"/>
-            </svg>
-          </Link>
-
-          <button
-            className="text-white focus:outline-none"
-            onClick={toggleMobileMenu}
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
       </div>
 
-      {/* Menú móvil desplegable */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-[#020043] pb-4 px-4 flex flex-col items-center gap-4">
-          <Link href="/" className="text-white hover:text-[#0066B3] w-full text-center py-2" onClick={toggleMobileMenu}>
-            Inicio
-          </Link>
-          <Link href="/#about" className="text-white hover:text-[#0066B3] w-full text-center py-2" onClick={toggleMobileMenu}>
-            Dr. Omar Espinosa
-          </Link>
-          <Link href="/#service" className="text-white hover:text-[#0066B3] w-full text-center py-2" onClick={toggleMobileMenu}>
-            Servicios
-          </Link>
-          <Link href="/#resenas" className="text-white hover:text-[#0066B3] w-full text-center py-2" onClick={toggleMobileMenu}>
-            Reseñas
-          </Link>
-          <Link href="/#contact" className="text-white hover:text-[#0066B3] w-full text-center py-2" onClick={toggleMobileMenu}>
-            Contacto
-          </Link>
-          
-          {/* Selector de idioma en menú móvil */}
-          <Link 
-            href="/en/page" 
-            className="flex items-center justify-center w-full py-2 text-white hover:text-[#0066B3]"
-            onClick={toggleMobileMenu}
-          >
-            <span className="mr-2">English Version</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12">
-              <clipPath id="v">
-                <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
-              </clipPath>
-              <path d="M0,0 v30 h60 v-30 z" fill="#00247d"/>
-              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-              <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#v)" stroke="#cf142b" stroke-width="4"/>
-              <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
-              <path d="M30,0 v30 M0,15 h60" stroke="#cf142b" stroke-width="6"/>
-            </svg>
-          </Link>
+      {/* Menú móvil */}
+      <div
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-[#020043] flex flex-col items-center gap-6 justify-center transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <button className="absolute top-4 right-4 text-white" onClick={() => setIsOpen(false)}>
+          <X size={28} />
+        </button>
+        <Link href="/" className="text-white text-lg" onClick={() => setIsOpen(false)}>Inicio</Link>
+        <Link href="/#about" className="text-white text-lg" onClick={() => setIsOpen(false)}>Dr. Omar Espinosa</Link>
+        <Link href="/#service" className="text-white text-lg" onClick={() => setIsOpen(false)}>Servicios</Link>
+        <Link href="/#resenas" className="text-white text-lg" onClick={() => setIsOpen(false)}>Reseñas</Link>
+        <Link href="/#contact" className="text-white text-lg" onClick={() => setIsOpen(false)}>Contacto</Link>
 
-          <Link href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank" className="w-full text-center py-2" onClick={toggleMobileMenu}>
-            <Button className="bg-[#FFB800] text-white hover:bg-[#e5a600] w-full">
-              Agendar Cita
-            </Button>
-          </Link>
-        </div>
-      )}
+        {/* Bandera en el menú móvil */}
+        <Link href="/en" className="flex items-center gap-2 text-white text-lg" onClick={() => setIsOpen(false)}>
+          🇺🇸
+          English
+        </Link>
+
+        <Link
+          href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta"
+          target="_blank"
+          onClick={() => setIsOpen(false)}
+        >
+          <Button className="bg-[#FFB800] text-white hover:bg-[#e5a600]">Agendar Cita</Button>
+        </Link>
+      </div>
     </nav>
   );
 }
