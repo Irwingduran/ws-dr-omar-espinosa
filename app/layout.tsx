@@ -16,7 +16,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Dr. Omar Espinosa",
   description: "Especialista en Cirugía General, Cirugía Laparoscópica Avanzada y Cirugía Bariátrica.",
+  icons: "/icon.png",
 };
+
 
 export default function RootLayout({
   children,
