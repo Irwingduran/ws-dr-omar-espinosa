@@ -185,7 +185,7 @@ export default function BypassGastricoPage() {
             <p className="text-gray-600 mb-8 px-4">
               You'll not only see physical changes, but you'll also regain energy, confidence, and health.
             </p>
-            <Link href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
+            <Link href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
               <Button className="bg-[#FFB800] text-white hover:bg-[#0056A3] px-6 py-3 md:px-8 md:py-4">
                 Schedule Your Evaluation
               </Button>
