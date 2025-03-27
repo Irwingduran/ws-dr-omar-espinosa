@@ -15,7 +15,7 @@ export default function HeroSection() {
             <p className="text-gray-600 mb-6 text-lg">
             El Dr. Omar Espinosa es especialista en Cirugía General, Cirugía Laparoscópica Avanzada y Cirugía Bariátrica.
             </p>
-            <a href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20perfil%20en%20findoctor%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
+            <a href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
             <Button className="bg-[#FFB800] text-white hover:bg-[#e5a600] text-lg px-8">Agendar Cita</Button></a>
           </div>
           <div className="relative">
