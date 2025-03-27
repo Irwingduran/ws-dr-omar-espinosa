@@ -51,7 +51,7 @@ export default function Navbar() {
             ES
           </Link>
 
-          <Link href="https://wa.me/5212221843622?text=Hello%20Dr.%20I%20found%20your%20profile%20on%20Findoctor%20and%20I%20would%20like%20to%20schedule%20a%20consultation" target="_blank">
+          <Link href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta" target="_blank">
             <Button className="bg-[#FFB800] text-white hover:bg-[#e5a600]">Schedule Appointment</Button>
           </Link>
         </div>
@@ -79,7 +79,7 @@ export default function Navbar() {
         </Link>
 
         <Link
-          href="https://wa.me/5212221843622?text=Hello%20Dr.%20I%20found%20your%20profile%20on%20Findoctor%20and%20I%20would%20like%20to%20schedule%20a%20consultation"
+          href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta"
           target="_blank"
           onClick={() => setIsOpen(false)}
         >
