@@ -55,7 +55,7 @@ export default function About() {
           <div className="relative md:order-1">
             <div className="aspect-square w-full max-w-[500px] mx-auto">
               <iframe
-                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fbariatrapue%2Fvideos%2F123379890530368%2F&show_text=false&width=560&t=0"
+                src="https://www.facebook.com/plugins/video.php?height=500&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1820883811758217%2F&show_text=false&width=500&t=0"
                 width="100%"
                 height="100%"
                 style={{ border: 'none', overflow: 'hidden' }}
