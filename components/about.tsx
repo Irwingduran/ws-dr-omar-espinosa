@@ -63,7 +63,7 @@ export default function About() {
                 frameBorder="0"
                 allowFullScreen={true}
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                className="w-full h-full rounded-lg shadow-lg"
+                className="w-full h-full rounded-lg"
               ></iframe>
             </div>
           </div>
