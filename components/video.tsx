@@ -14,7 +14,7 @@ export default function VideoSection() {
             {/* Video Wrapper with 16:9 aspect ratio */}
             <div className="relative pb-[56.25%] h-0">
               <iframe
-                src="https://www.youtube.com/embed/yKfrmDnNt-c?si=fSACc5570FDmCTcT"
+                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fbariatrapue%2Fvideos%2F123379890530368%2F&show_text=false&width=560&t=0"
                 title="¿Qué hace un cirujano Bariátra?"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
