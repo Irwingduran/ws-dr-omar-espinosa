@@ -40,10 +40,10 @@ export default function Navbar() {
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-8">
           <Link href="/en" className="text-white hover:text-[#0066B3]">Home</Link>
-          <Link href="/#about" className="text-white hover:text-[#0066B3]">Dr. Omar Espinosa</Link>
-          <Link href="/#service" className="text-white hover:text-[#0066B3]">Services</Link>
-          <Link href="/#resenas" className="text-white hover:text-[#0066B3]">Reviews</Link>
-          <Link href="/#contact" className="text-white hover:text-[#0066B3]">Contact</Link>
+          <Link href="/en/#about" className="text-white hover:text-[#0066B3]">Dr. Omar Espinosa</Link>
+          <Link href="/en/#service" className="text-white hover:text-[#0066B3]">Services</Link>
+          <Link href="/en/#resenas" className="text-white hover:text-[#0066B3]">Reviews</Link>
+          <Link href="/en/#contact" className="text-white hover:text-[#0066B3]">Contact</Link>
 
           {/* Mexico flag with link to Spanish version */}
           <Link href="/" className="flex items-center gap-2 text-white hover:text-[#0066B3]">
@@ -67,10 +67,10 @@ export default function Navbar() {
           <X size={28} />
         </button>
         <Link href="/en" className="text-white text-lg" onClick={() => setIsOpen(false)}>Home</Link>
-        <Link href="/#about" className="text-white text-lg" onClick={() => setIsOpen(false)}>Dr. Omar Espinosa</Link>
-        <Link href="/#service" className="text-white text-lg" onClick={() => setIsOpen(false)}>Services</Link>
-        <Link href="/#resenas" className="text-white text-lg" onClick={() => setIsOpen(false)}>Reviews</Link>
-        <Link href="/#contact" className="text-white text-lg" onClick={() => setIsOpen(false)}>Contact</Link>
+        <Link href="/en/#about" className="text-white text-lg" onClick={() => setIsOpen(false)}>Dr. Omar Espinosa</Link>
+        <Link href="/en/#service" className="text-white text-lg" onClick={() => setIsOpen(false)}>Services</Link>
+        <Link href="/en/#resenas" className="text-white text-lg" onClick={() => setIsOpen(false)}>Reviews</Link>
+        <Link href="/en/#contact" className="text-white text-lg" onClick={() => setIsOpen(false)}>Contact</Link>
 
         {/* Mexico flag in mobile menu */}
         <Link href="/" className="flex items-center gap-2 text-white text-lg" onClick={() => setIsOpen(false)}>
