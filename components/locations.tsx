@@ -19,7 +19,7 @@ export default function LocationSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-light text-gray-900">Nuestra Ubicación</h2>
-          <p className="text-lg text-gray-600">Consulta en nuestra sede en Puebla</p>
+          <p className="text-lg text-gray-600">Consulta nuestra sede en Puebla</p>
         </div>
 
         <div className="flex justify-center items-center">
