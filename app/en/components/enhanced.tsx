@@ -13,17 +13,16 @@ export default function EnhancedFooter() {
 
   return (
     <footer className="relative">
-      {/* Fondo con gradiente */}
+      {/* Background with gradient */}
       <div className="absolute inset-0 bg-[#020043] opacity-90" />
 
       <div className="relative container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
-          {/* Columna izquierda */}
+          {/* Left column */}
           <div className="space-y-8">
             <img src={logo.src} alt="logo" className="h-24" />
             <h2 className="text-1xl font-light text-white max-w-md">
-              El Dr. Omar Espinosa es médico cirujano especialista en cirugía bariátrica certificado por el Consejo
-              Mexicano de Cirugía.
+              Dr. Omar Espinosa is a certified bariatric surgeon specialist by the Mexican Council of Surgery.
             </h2>
 
             <div className="flex items-center space-x-4">
@@ -54,7 +53,7 @@ export default function EnhancedFooter() {
             </div>
           </div>
 
-          {/* Columna derecha */}
+          {/* Right column */}
           <div className="space-y-8">
             <div className="grid gap-6">
               <a
@@ -96,10 +95,10 @@ export default function EnhancedFooter() {
           </div>
         </div>
 
-        {/* Derechos de autor en la parte inferior */}
+        {/* Copyright at the bottom */}
         <div className="mt-16 pt-8 border-t border-white/10">
           <p className="text-white/60 text-sm text-center">
-            © {new Date().getFullYear()} Delta <a href="https://marketingmedicos.com.mx/" className="hover:text-yellow-400">by Imagen Médica </a>. Todos los derechos reservados.
+            © {new Date().getFullYear()} Delta <a href="https://marketingmedicos.com.mx/" className="hover:text-yellow-400">by Medical Image</a>. All rights reserved.
           </p>
         </div>
       </div>
