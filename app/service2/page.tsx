@@ -7,6 +7,7 @@ import { Button } from "../../components/ui/button"
 import Link from "next/link"
 import Navbar from "../../components/navbar"
 import Footer from "../../components/enhanced"
+import WhatsAppButton from "../../components/social-media-buttons"
 
 export default function MangaGastricaPage() {
   // Configuración del carrusel
@@ -34,6 +35,7 @@ export default function MangaGastricaPage() {
 
   return (
     <div>
+      <WhatsAppButton/>
       <Navbar />
       <div className="w-full bg-white">
         {/* Hero Section */}
