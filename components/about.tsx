@@ -6,7 +6,7 @@ export default function About() {
           {/* Texto (intercambiado a la derecha en pantallas md y mayores) */}
           <div className="md:order-2">
             <h2 className="text-4xl text-gray-800 font-light mb-4">
-              Dr. Omar Espinosa González
+              Dr. Omar Espinosa González 
             </h2>
             <div className="w-32 h-1 bg-[#0066B3] mb-8"></div>
             <div className="prose prose-lg text-gray-600 mb-8">
