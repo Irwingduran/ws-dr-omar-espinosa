@@ -1,7 +1,6 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image"; // Añadido el import de Image
-import { FaHeart, FaStethoscope, FaWeight, FaMedkit } from "react-icons/fa";
 
 const services = [
   {
@@ -13,7 +12,7 @@ const services = [
   {
     id: "colecistectomia",
     name: "Colecistectomia",
-    image: "/icon/cole.webp",
+    image: "/icon/cole.png",
     href: "/service3", 
   },
   {
@@ -25,7 +24,7 @@ const services = [
   {
     id: "hil",
     name: "Hernia Inguinal Laparoscópica",
-    image: "/icon/hernia.webp",
+    image: "/icon/hernia.png",
     href: "/service4", 
   },
 ];
