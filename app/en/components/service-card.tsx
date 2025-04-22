@@ -86,7 +86,7 @@ export default function ServiceCard({
         <img
           src={imageSrc || "/placeholder.svg"}
           alt={imageAlt}
-          className="w-full rounded-lg"
+          className="w-2/5 rounded-lg mx-auto"
         />
       </div>
       </Link>
