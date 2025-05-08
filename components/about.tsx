@@ -25,7 +25,7 @@ export default function About() {
                 Certificaciones y Membresías
               </h3>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Certificado por el Consejo Mexicano de Cirugía General</li>
+                <li> Certificado por el Consejo Mexicano de Cirugía General en Cirugía Bariátrica y Cirugía General</li>
                 <li>
                   Miembro activo en:
                   <ul className="">
