@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "¿Soy candidato para cirugía bariátrica?",
     answer:
-      "Los candidatos típicos tienen un IMC de 40 o mayor, o un IMC de 35 con condiciones médicas relacionadas con la obesidad. También deben estar dispuestos a hacer cambios significativos en su estilo de vida y seguir las recomendaciones médicas y nutricionales.",
+      "Los candidatos típicos tienen un IMC de 35 o mayor, o un IMC de 30 con condiciones médicas relacionadas con la obesidad. También deben estar dispuestos a hacer cambios significativos en su estilo de vida y seguir las recomendaciones médicas y nutricionales.",
   },
   {
     question: "¿Cuánto tiempo dura la recuperación?",
