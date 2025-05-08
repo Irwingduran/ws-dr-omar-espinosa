@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "Am I a candidate for bariatric surgery?",
     answer:
-      "Typical candidates have a BMI of 40 or higher, or a BMI of 35 with obesity-related medical conditions. They must also be willing to make significant lifestyle changes and follow medical and nutritional recommendations.",
+      "Typical candidates have a BMI of 35 or higher, or a BMI of 30 with obesity-related medical conditions. They must also be willing to make significant lifestyle changes and follow medical and nutritional recommendations.",
   },
   {
     question: "How long does recovery take?",
