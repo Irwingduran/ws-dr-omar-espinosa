@@ -73,7 +73,12 @@ export default function ContactSection() {
     },
     {
       icon: Phone,
-      title: "Teléfono",
+      title: "Consultorio",
+      description: "222 124 1865",
+    },
+    {
+      icon: Phone,
+      title: "Urgencias",
       description: "222 184 3622",
     },
     {
