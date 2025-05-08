@@ -21,7 +21,7 @@ export default function About() {
                 Certifications and Memberships
               </h3>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Certified by the Mexican Council of General Surgery</li>
+                <li>Certified by the Mexican Board of General Surgery in Bariatric Surgery and General Surgery</li>
                 <li>
                   Active member of:
                   <ul className="">
