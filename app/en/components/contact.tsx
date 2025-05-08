@@ -73,7 +73,7 @@ export default function ContactSection() {
     {
       icon: Phone,
       title: "Phone",
-      description: "222 184 3622",
+      description: "Clinic: 222 124 1865 / Emergency: 222 184 3622",
     },
     {
       icon: Mail,
