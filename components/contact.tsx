@@ -74,7 +74,7 @@ export default function ContactSection() {
     {
       icon: Phone,
       title: "Teléfono",
-      description: "Consultorio: 222 124 1865 / Urgencias: 222 184 3622",
+      description: "Consultorio: 222 124 1865  Urgencias: 222 184 3622",
     },
     {
       icon: Mail,
