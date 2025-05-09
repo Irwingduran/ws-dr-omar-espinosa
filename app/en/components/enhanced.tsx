@@ -57,14 +57,24 @@ export default function EnhancedFooter() {
           <div className="space-y-8">
             <div className="grid gap-6">
               <a
+                href="tel:2221241865"
+                className="flex items-center space-x-3 text-white hover:text-white/80 transition-colors"
+              >
+                <div className="bg-white/10 p-3 rounded-full">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <span>Clinic: 222 124 1865</span>
+              </a>
+               <a
                 href="tel:2221843622"
                 className="flex items-center space-x-3 text-white hover:text-white/80 transition-colors"
               >
                 <div className="bg-white/10 p-3 rounded-full">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span> 222 184 3622</span>
+                <span> Emergency: 222 184 3622</span>
               </a>
+
 
               <a
                 href="mailto:drespinosa.cirugia@gmail.com"
