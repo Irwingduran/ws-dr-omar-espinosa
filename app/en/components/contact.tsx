@@ -68,12 +68,12 @@ export default function ContactSection() {
     {
       icon: Clock,
       title: "Office Hours",
-      description: "Tuesday to Thursday: 10:00 AM - 2:00 PM",
+      description: "Tuesday to Thursday - With Appointment",
     },
     {
       icon: Phone,
       title: "Phone",
-      description: "Clinic: 222 124 1865 / Emergency: 222 184 3622",
+      description: "Clinic: 222 124 1865 - Emergency: 222 184 3622",
     },
     {
       icon: Mail,
