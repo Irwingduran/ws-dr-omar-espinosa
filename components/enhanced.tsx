@@ -64,7 +64,9 @@ export default function EnhancedFooter() {
                 <div className="bg-white/10 p-3 rounded-full">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span> 222 184 3622</span>
+                
+                <span> Consultorio: 222 124 1865</span>
+                 <span> Urgencias: 222 184 3622</span>
               </a>
 
               <a
