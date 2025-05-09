@@ -69,7 +69,7 @@ export default function ContactSection() {
     {
       icon: Clock,
       title: "Horario de Atención",
-      description: "Martes a Jueves: 10:00 AM - 2:00 PM",
+      description: "Lunes a Sábado: 10:00 AM - 2:00 PM (Cita Previa)",
     },
     {
       icon: Phone,
