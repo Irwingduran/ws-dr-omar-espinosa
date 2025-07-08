@@ -43,7 +43,12 @@ export default function BypassGastricoPage() {
             <h1 className="text-3xl md:text-5xl font-light mb-4">Gastric Bypass</h1>
             <p className="text-base md:text-lg">
               An advanced solution for weight loss and health improvement.
-            </p>
+            </p><br></br>
+            <Link href="https://wa.me/5212221843622?text=Hello%20Doctor%2C%20I%20found%20your%20website%20and%20I%20would%20like%20to%20make%20an%20inquiry">
+              <Button className="bg-[#FFB800] text-white hover:bg-[#0056A3] px-6 py-3 md:px-8 md:py-4">
+                Schedule Your Evaluation
+              </Button>
+            </Link>
           </div>
         </div>
 
