@@ -40,17 +40,19 @@ export default function GastricSleevePage() {
       <Navbar />
       <div className="w-full bg-white">
         {/* Hero Section */}
-        <div className="relative w-full h-[300px] md:h-[400px] bg-[#0066B3] flex items-center justify-center">
+        <div className="relative w-full h-[300px] md:h-[400px] bg-[#0e0c3f] flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-3xl md:text-5xl font-light mb-4">Gastric Sleeve</h1>
             <p className="text-lg">
               An effective and safe solution for weight loss.
-            </p><br></br>
+            </p>
+            <div className="mt-6">
             <Link href="https://wa.me/5212221843622?text=Hello%20Doctor%2C%20I%20found%20your%20website%20and%20I%20would%20like%20to%20make%20an%20inquiry">
               <Button className="bg-[#FFB800] text-white hover:bg-[#0056A3] px-6 py-3 md:px-8 md:py-4">
-                Schedule appointment
+                Schedule Evaluation
               </Button>
             </Link>
+            </div>
           </div>
         </div>
 

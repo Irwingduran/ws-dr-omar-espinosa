@@ -39,17 +39,19 @@ export default function MangaGastricaPage() {
       <Navbar />
       <div className="w-full bg-white">
         {/* Hero Section */}
-        <div className="relative w-full h-[300px] md:h-[400px] bg-[#0066B3] flex items-center justify-center">
+        <div className="relative w-full h-[300px] md:h-[400px] bg-[#0e0c3f] flex items-center justify-center">
           <div className="text-center text-white px-4">
             <h1 className="text-3xl md:text-5xl font-light mb-4">Manga Gástrica</h1>
             <p className="text-base md:text-lg">
               Una solución eficaz y segura para la pérdida de peso.
-            </p><br></br>
-            <Link href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
-              <Button className="bg-[#FFB800] text-white hover:bg-[#020043] px-8 py-4">
-                Agenda tu Cita
-              </Button>
-            </Link>
+            </p>
+              <div className="mt-6">
+                <Link href="https://wa.me/5212221843622?text=Hello%20Doctor%2C%20I%20found%20your%20website%20and%20I%20would%20like%20to%20make%20an%20inquiry">
+                <Button className="bg-[#FFB800] text-white hover:bg-[#0056A3] px-6 py-3 md:px-8 md:py-4">
+                Agenda Tu Consulta
+                </Button>
+               </Link>
+            </div>
           </div>
         </div>
 
