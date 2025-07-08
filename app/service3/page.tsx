@@ -41,7 +41,7 @@ export default function ColecistectomiaPage() {
             <h1 className="text-3xl md:text-5xl font-light mb-4">Colecistectomía</h1>
             <p className="text-base md:text-lg">
               Un procedimiento seguro para tratar problemas de la vesícula biliar.
-            </p>
+            </p><br></br>
             <Link href="https://wa.me/5212221843622?text=Hola%20Dr.%20encontr%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20realizar%20una%20consulta">
               <Button className="bg-[#FFB800] text-white hover:bg-[#020043] px-8 py-4">
                 Agenda tu Cita
