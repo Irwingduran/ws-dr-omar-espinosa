@@ -13,19 +13,25 @@ import { useToast } from "../../hooks/use-toast"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
 
 const formSchema = z.object({
-  nombre: z.string().min(2, {
+  name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
   }),
   email: z.string().email({
     message: "Please enter a valid email.",
   }),
-  telefono: z.string().min(10, {
+  phone: z.string().min(10, {
     message: "Please enter a valid phone number.",
   }),
-  mensaje: z.string().min(10, {
+  message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),
 })
+
+type ContactInfo = {
+  icon: React.ComponentType<{ className?: string }>
+  title: string
+  description: string
+}
 
 export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -36,30 +42,69 @@ export default function ContactSection() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
+  } = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   })
 
-  const onSubmit = async (data: any) => {
-    setIsSubmitting(true)
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    setIsSubmitting(true);
+    
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500))
+      // Verify environment variables
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+      
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing');
+      }
+
+      // Dynamic import to reduce bundle size
+      const emailjs = (await import('@emailjs/browser')).default;
+      
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        phone: data.phone,
+        message: data.message,
+        to_email: 'drespinosa.cirugia@gmail.com',
+        reply_to: data.email
+      };
+
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      if (response.status !== 200) {
+        throw new Error(`EmailJS error: ${response.text}`);
+      }
+
       toast({
         title: "Message sent",
         description: "We will contact you soon.",
-      })
-      reset()
-    } catch (error) {
+      });
+      reset();
+    } catch (error: unknown) {
+      console.error('Email submission error:', error);
+      
+      const errorMessage = error instanceof Error 
+        ? error.message 
+        : "There was a problem sending your message. Please try again.";
+      
       toast({
         title: "Error",
-        description: "There was a problem sending your message. Please try again.",
+        description: errorMessage,
         variant: "destructive",
-      })
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsSubmitting(false)
   }
 
-  const contactInfo = [
+  const contactInfo: ContactInfo[] = [
     {
       icon: MapPin,
       title: "Main Location",
@@ -68,12 +113,12 @@ export default function ContactSection() {
     {
       icon: Clock,
       title: "Office Hours",
-      description: "Tuesday to Thursday - With Appointment",
+      description: "Monday to Saturday - By Appointment",
     },
     {
       icon: Phone,
       title: "Phone",
-      description: "Clinic: 222 124 1865 - Emergency: 222 184 3622",
+      description: "Office: 222 124 1865  Emergency: 222 184 3622",
     },
     {
       icon: Mail,
@@ -88,7 +133,9 @@ export default function ContactSection() {
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-light text-gray-900 mb-4">Contact</h2>
           <p className="text-lg text-gray-600">
-            Dr. Omar Espinosa currently practices at Hospital Puebla in Puebla City. If you're seeking treatment or want to explore your options, schedule an appointment here to receive proper care from a professional.
+            Dr. Omar Espinosa currently practices at Hospital Puebla in Puebla City. If you are
+            seeking treatment or want to explore your options, schedule an appointment here to receive
+            proper care from a professional.
           </p>
         </div>
 
@@ -98,7 +145,7 @@ export default function ContactSection() {
               <CardHeader>
                 <CardTitle>Send us a message</CardTitle>
                 <CardDescription>
-                  Fill out the form and we'll contact you as soon as possible.
+                  Complete the form and we will contact you as soon as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -106,10 +153,12 @@ export default function ContactSection() {
                   <div className="space-y-2">
                     <Input
                       placeholder="Full name"
-                      {...register("nombre")}
-                      className={errors.nombre ? "border-red-500" : ""}
+                      {...register("name")}
+                      className={errors.name ? "border-red-500" : ""}
                     />
-                    {errors.nombre && <p className="text-sm text-red-500">{errors.nombre.message as string}</p>}
+                    {errors.name && (
+                      <p className="text-sm text-red-500">{errors.name.message}</p>
+                    )}
                   </div>
 
                   <div className="space-y-2">
@@ -119,29 +168,39 @@ export default function ContactSection() {
                       {...register("email")}
                       className={errors.email ? "border-red-500" : ""}
                     />
-                    {errors.email && <p className="text-sm text-red-500">{errors.email.message as string}</p>}
+                    {errors.email && (
+                      <p className="text-sm text-red-500">{errors.email.message}</p>
+                    )}
                   </div>
 
                   <div className="space-y-2">
                     <Input
                       type="tel"
                       placeholder="Phone"
-                      {...register("telefono")}
-                      className={errors.telefono ? "border-red-500" : ""}
+                      {...register("phone")}
+                      className={errors.phone ? "border-red-500" : ""}
                     />
-                    {errors.telefono && <p className="text-sm text-red-500">{errors.telefono.message as string}</p>}
+                    {errors.phone && (
+                      <p className="text-sm text-red-500">{errors.phone.message}</p>
+                    )}
                   </div>
 
                   <div className="space-y-2">
                     <Textarea
                       placeholder="Message"
-                      {...register("mensaje")}
-                      className={`min-h-[120px] ${errors.mensaje ? "border-red-500" : ""}`}
+                      {...register("message")}
+                      className={`min-h-[120px] ${errors.message ? "border-red-500" : ""}`}
                     />
-                    {errors.mensaje && <p className="text-sm text-red-500">{errors.mensaje.message as string}</p>}
+                    {errors.message && (
+                      <p className="text-sm text-red-500">{errors.message.message}</p>
+                    )}
                   </div>
 
-                  <Button type="submit" className="w-full bg-[#FFB800] hover:bg-[#e5a600]" disabled={isSubmitting}>
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-[#FFB800] hover:bg-[#e5a600]" 
+                    disabled={isSubmitting}
+                  >
                     {isSubmitting ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -157,8 +216,8 @@ export default function ContactSection() {
           </div>
 
           <div className="space-y-6">
-            {contactInfo.map((item) => (
-              <Card key={item.title}>
+            {contactInfo.map((item, index) => (
+              <Card key={index}>
                 <CardContent className="pt-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-blue-50 p-3 rounded-full">
