@@ -9,7 +9,7 @@ import { Loader2, MapPin, Clock, Phone, Mail } from "lucide-react"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
-import { useToast } from "../app/hooks/use-toast" // Updated import
+import { useToast } from "../app/hooks/use-toast" 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
 
 const formSchema = z.object({
@@ -27,6 +27,12 @@ const formSchema = z.object({
   }),
 })
 
+type ContactInfo = {
+  icon: React.ComponentType<{ className?: string }>
+  title: string
+  description: string
+}
+
 export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
@@ -36,31 +42,69 @@ export default function ContactSection() {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
+  } = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   })
 
-  const onSubmit = async (data: any) => {
-    setIsSubmitting(true)
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    setIsSubmitting(true);
+    
     try {
-      // Simulated API call
-      await new Promise((resolve) => setTimeout(resolve, 1500))
+      // Verify environment variables
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+      
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing');
+      }
+
+      // Dynamic import to reduce bundle size
+      const emailjs = (await import('@emailjs/browser')).default;
+      
+      const templateParams = {
+        from_name: data.nombre,
+        from_email: data.email,
+        phone: data.telefono,
+        message: data.mensaje,
+        to_email: 'drespinosa.cirugia@gmail.com',
+        reply_to: data.email
+      };
+
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      if (response.status !== 200) {
+        throw new Error(`EmailJS error: ${response.text}`);
+      }
+
       toast({
         title: "Mensaje enviado",
         description: "Nos pondremos en contacto contigo pronto.",
-      })
-      reset()
-    } catch (error) {
+      });
+      reset();
+    } catch (error: unknown) {
+      console.error('Email submission error:', error);
+      
+      const errorMessage = error instanceof Error 
+        ? error.message 
+        : "Hubo un problema al enviar el mensaje. Por favor intente nuevamente.";
+      
       toast({
         title: "Error",
-        description: "Hubo un problema al enviar el mensaje. Por favor intente nuevamente.",
+        description: errorMessage,
         variant: "destructive",
-      })
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsSubmitting(false)
   }
 
-  const contactInfo = [
+  const contactInfo: ContactInfo[] = [
     {
       icon: MapPin,
       title: "Ubicación Principal",
@@ -112,7 +156,9 @@ export default function ContactSection() {
                       {...register("nombre")}
                       className={errors.nombre ? "border-red-500" : ""}
                     />
-                    {errors.nombre && <p className="text-sm text-red-500">{errors.nombre.message as string}</p>}
+                    {errors.nombre && (
+                      <p className="text-sm text-red-500">{errors.nombre.message}</p>
+                    )}
                   </div>
 
                   <div className="space-y-2">
@@ -122,7 +168,9 @@ export default function ContactSection() {
                       {...register("email")}
                       className={errors.email ? "border-red-500" : ""}
                     />
-                    {errors.email && <p className="text-sm text-red-500">{errors.email.message as string}</p>}
+                    {errors.email && (
+                      <p className="text-sm text-red-500">{errors.email.message}</p>
+                    )}
                   </div>
 
                   <div className="space-y-2">
@@ -132,7 +180,9 @@ export default function ContactSection() {
                       {...register("telefono")}
                       className={errors.telefono ? "border-red-500" : ""}
                     />
-                    {errors.telefono && <p className="text-sm text-red-500">{errors.telefono.message as string}</p>}
+                    {errors.telefono && (
+                      <p className="text-sm text-red-500">{errors.telefono.message}</p>
+                    )}
                   </div>
 
                   <div className="space-y-2">
@@ -141,10 +191,16 @@ export default function ContactSection() {
                       {...register("mensaje")}
                       className={`min-h-[120px] ${errors.mensaje ? "border-red-500" : ""}`}
                     />
-                    {errors.mensaje && <p className="text-sm text-red-500">{errors.mensaje.message as string}</p>}
+                    {errors.mensaje && (
+                      <p className="text-sm text-red-500">{errors.mensaje.message}</p>
+                    )}
                   </div>
 
-                  <Button type="submit" className="w-full bg-[#FFB800] hover:bg-[#e5a600]" disabled={isSubmitting}>
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-[#FFB800] hover:bg-[#e5a600]" 
+                    disabled={isSubmitting}
+                  >
                     {isSubmitting ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -160,8 +216,8 @@ export default function ContactSection() {
           </div>
 
           <div className="space-y-6">
-            {contactInfo.map((item) => (
-              <Card key={item.title}>
+            {contactInfo.map((item, index) => (
+              <Card key={index}>
                 <CardContent className="pt-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-blue-50 p-3 rounded-full">
