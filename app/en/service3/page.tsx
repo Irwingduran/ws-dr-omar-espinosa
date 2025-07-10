@@ -35,7 +35,7 @@ export default function CholecystectomyPage() {
       <Navbar />
       <div className="w-full bg-white">
         {/* Hero Section */}
-        <div className="relative w-full h-[300px] md:h-[400px] bg-[#0e0c3f] flex items-center justify-center">
+        <div className="relative w-full h-[400px] md:h-[400px] bg-[#0e0c3f] flex items-center justify-center">
           <div className="text-center text-white px-4">
             <h1 className="text-3xl md:text-5xl font-light mb-4">Cholecystectomy</h1>
             <p className="text-base md:text-lg">
